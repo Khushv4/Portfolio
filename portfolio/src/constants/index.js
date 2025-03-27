@@ -11,8 +11,8 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'Work',
-    href: '#work',
+    name: 'Projects',
+    href: '#Projects',
   },
   {
     id: 4,
@@ -248,12 +248,12 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
-    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
+    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.062,
+    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -4.5, 0],
+    cubePosition: isSmall ? [3, -5, 3] : isMobile ? [5, -5, -2] : isTablet ? [5, -5, 0] : [9, -3, 0],
+    reactLogoPosition: isSmall ? [7, 6, -5] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 5, -2],
+    ringPosition: isSmall ? [-4, 3.5, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-10, 5, 0],
+    targetPosition: isSmall ? [-4, 5, -7] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-9, -5, 3],
   };
 };
 

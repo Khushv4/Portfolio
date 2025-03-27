@@ -10,9 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.0.4",
+    "@react-three/fiber": "^9.1.0",
     "@tailwindcss/vite": "^4.0.15",
+    "gsap": "^3.12.7",
+    "leva": "^0.10.0",
+    "maath": "^0.10.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-globe.gl": "^2.33.2",
+    "react-parallax-tilt": "^1.7.287",
+    "react-responsive": "^10.0.1",
+    "three": "^0.174.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
