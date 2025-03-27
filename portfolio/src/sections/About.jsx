@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
-  const cardsRef = useRef([]); // Stores references to all cards
+  const cardsRef = useRef([]); 
 
   useGSAP(() => {
-    // Animate each card
+    
     cardsRef.current.forEach((card, index) => {
       gsap.fromTo(
         card,
-        { opacity: 0, scale: 0.8, y: 50 }, // Initial state
+        { opacity: 0, scale: 0.8, y: 50 }, 
         {
           opacity: 1,
           scale: 1,
@@ -26,7 +26,7 @@ const About = () => {
           stagger: 0.1,
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%', // Animation starts when the card enters the viewport
+            start: 'top 85%', 
             toggleActions: 'play none none reverse',
           },
         }
@@ -44,7 +44,7 @@ const About = () => {
     <section className="c-space mt-50 my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         
-        {/* Card 1 */}
+      
         <div ref={(el) => (cardsRef.current[0] = el)} className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
@@ -57,7 +57,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 2 */}
+        
         <div ref={(el) => (cardsRef.current[1] = el)} className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img src="assets/code-512.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain brightness-40" />
@@ -70,7 +70,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 3 */}
+        
         <div ref={(el) => (cardsRef.current[2] = el)} className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
@@ -94,7 +94,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 4 */}
+      
         <div ref={(el) => (cardsRef.current[3] = el)} className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
@@ -107,7 +107,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Card 5 */}
+        
         <div ref={(el) => (cardsRef.current[4] = el)} className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img src="assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />

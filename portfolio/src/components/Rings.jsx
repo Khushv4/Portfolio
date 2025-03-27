@@ -1,7 +1,7 @@
-import { useGSAP } from '@gsap/react';
-import { Center, useTexture } from '@react-three/drei';
-import gsap from 'gsap';
-import { useCallback, useRef } from 'react';
+import { useGSAP } from "@gsap/react";
+import { Center, useTexture } from "@react-three/drei";
+import gsap from "gsap";
+import { useCallback, useRef } from "react";
 
 const Rings = ({ position = [0, 0, 0] }) => {
   const refList = useRef([]);
@@ -11,19 +11,17 @@ const Rings = ({ position = [0, 0, 0] }) => {
     }
   }, []);
 
-  const texture = useTexture('textures/rings.png');
+  const texture = useTexture("textures/rings.png");
 
   useGSAP(() => {
     if (refList.current.length === 0) return;
 
-    // Set initial position for all rings
     refList.current.forEach((r) => {
       if (r.position) {
         r.position.set(...position);
       }
     });
 
-    // GSAP Rotation Animation
     gsap.timeline({ repeat: -1, repeatDelay: 0.6 }).to(
       refList.current.map((r) => r.rotation),
       {
@@ -50,4 +48,3 @@ const Rings = ({ position = [0, 0, 0] }) => {
 };
 
 export default Rings;
-
