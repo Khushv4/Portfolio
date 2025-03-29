@@ -15,7 +15,6 @@ const Contact = () => {
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
-  console.log(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID);
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -114,7 +113,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 required
-                rows={5}
+                rows={3}
                 className="field-input"
                 placeholder="Share your thoughts or inquiries..."
               />
